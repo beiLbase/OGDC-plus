@@ -58,7 +58,7 @@ class Proto(fewshot_re_kit.framework.FewShotREModel):
 
 
         exp_neg_dist = torch.exp(-topk_dist)
-        sum_exp_neg_dist = torch.sum(exp_neg_dist, dim=1, keepdim=True) + 1e-8  # 避免除0
+        sum_exp_neg_dist = torch.sum(exp_neg_dist, dim=1, keepdim=True) + 1e-8 
         weights = exp_neg_dist / sum_exp_neg_dist
 
 
@@ -75,7 +75,7 @@ class Proto(fewshot_re_kit.framework.FewShotREModel):
         calibrated_vars = global_vars + (alpha if alpha is not None else 0.0) * query_vars
         calibrated_covs = torch.stack([torch.diag(v) for v in calibrated_vars], dim=0)
 
-        # 重塑回原始形状
+    
         calibrated_means = calibrated_means.view(B, N, K, D)
         calibrated_covs = calibrated_covs.view(B, N, K, D, D)
 
