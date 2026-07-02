@@ -6,8 +6,8 @@
 
 
 
-- <span style="font-size: 20px; font-weight: bold;">dadopting a query-set gaussian distribution calibration mechanism on FSRE task </span>
-- <span style="font-size: 20px; font-weight: bold;">generating pseudo samples to augment the support set and calibrate the prototypical network</span>
+- <span style="font-size: 20px; font-weight: bold;">adadopting a query-set gaussian distribution calibration mechanism based on IRRI method </span>
+
 
 
 ##  Acknowledgements
